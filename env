@@ -1,5 +1,5 @@
 MAILNET=mail
-MTA_CONTAINER=mta
+MTA_CONTAINER=mail
 MTA_IMAGE=cisl-repo/postfix
 
 TAG_postfix=latest
