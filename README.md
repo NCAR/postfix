@@ -15,10 +15,10 @@ The easiest way to support sending email from another container is to do the
 following in the other container's Dockerfile:
 
 1. Install *ssmtp*. (For CentOS/RedHat, this requires *epel-release*.)
-+ If necessary, change the value of the "mailhub" parameter in
+2. If necessary, change the value of the "mailhub" parameter in
 /etc/ssmtp/ssmtp.conf to be "mail". (Most ssmtp packages set this parameter
 to "mail" for you.)
-+ If necessary, make /usr/sbin/sendmail a symbolic link to the ssmtp binary.
+3. If necessary, make /usr/sbin/sendmail a symbolic link to the ssmtp binary.
 (The apt package does this for you. On CentOS, /usr/bin/sendmail is a link to
 /etc/alternatives/mta - you can change the /etc/alternatives/mta link to point
 to ssmtp instead.)
