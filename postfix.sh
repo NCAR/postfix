@@ -69,6 +69,7 @@ function status() {
 
 function stop() {
     docker exec ${MTA_CONTAINER} postfix stop
+    exit 0
 }
 
 function reload() {
