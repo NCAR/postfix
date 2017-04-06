@@ -1,0 +1,8 @@
+MAILNET=mail
+MTA_CONTAINER=mta
+MTA_IMAGE=cisl-repo/postfix
+
+TAG_postfix=latest
+
+VOLMAP_DATA=
+

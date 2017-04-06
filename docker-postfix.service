@@ -1,0 +1,15 @@
+[Unit]
+Description=Postfix service container
+Documentation=http://www.postfix.org/documentation.html
+After=docker.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/docker/postfix/postfix.sh start
+ExecReload=/usr/local/docker/postfix/postfix.sh reload
+ExecStop=/usr/local/docker/postfix/postfix.sh stop
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

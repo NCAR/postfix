@@ -1,0 +1,10 @@
+**/.DS_Store
+**/.#.*
+**/*~
+**/*.swp
+.env
+.git
+.gitignore
+README
+README.md
+build.log
