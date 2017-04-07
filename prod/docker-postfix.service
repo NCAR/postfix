@@ -5,7 +5,7 @@ After=docker.service
 
 [Service]
 Type=simple
-ExecStart=/usr/local/docker/postfix/postfix.sh start
+ExecStart=/usr/local/docker/postfix/postfix.sh -e prod start
 ExecReload=/usr/local/docker/postfix/postfix.sh reload
 ExecStop=/usr/local/docker/postfix/postfix.sh stop
 Restart=on-failure

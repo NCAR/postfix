@@ -2,5 +2,5 @@
 **/.#.*
 **/*~
 **/*.swp
-.env
+dev-start.env
 build.log

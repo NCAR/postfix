@@ -2,9 +2,11 @@
 **/.#.*
 **/*~
 **/*.swp
-.env
 .git
 .gitignore
 README
 README.md
 build.log
+docker-postfix.service
+postfix.sh
+*start.env
