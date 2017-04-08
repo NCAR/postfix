@@ -87,7 +87,7 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 TAG=
 case $1 in
     -e?*)      TAG="${arg#-e}"
-               shift
+               shift ;;
     -e|--env)  TAG="$2"
                shift ; shift ;;
     -h|--help) help ;;
@@ -132,7 +132,7 @@ function start() {
     ensureNetworkExists
 
     docker rm ${MTA_CONTAINER} >/dev/null 2>&1
-set -x
+
     docker run --env-file $SCRIPTDIR/deploy.env \
                --name ${MTA_CONTAINER} \
                --volume $VOLMAP_DATA:/var/postfix \
