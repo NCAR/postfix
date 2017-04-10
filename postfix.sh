@@ -133,11 +133,11 @@ function start() {
 
     docker rm ${MTA_CONTAINER} >/dev/null 2>&1
 
-    docker run --env-file $SCRIPTDIR/deploy.env \
+    docker run --env-file $DEPLOY_ENV \
                --name ${MTA_CONTAINER} \
                --volume $VOLMAP_DATA:/var/postfix \
                --network ${MAILNET} \
-           ${MTA_IMAGE:$TAG_postfix} /bin/run-postfix.sh
+           ${MTA_IMAGE}:${TAG_postfix} /bin/run-postfix.sh
 
 }
 
