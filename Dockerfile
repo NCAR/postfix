@@ -9,6 +9,9 @@ RUN yum -y update && yum -y install \
     postfix \
     mailx
 
+RUN rm /etc/localtime
+RUN ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
+
 COPY run-postfix.sh /bin/
 
 EXPOSE 25 465 587
